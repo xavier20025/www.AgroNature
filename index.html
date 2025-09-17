@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroNature - Usine Alimentaire Bio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌱 AgroNature</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Accueil</a></li>
+                <li><a href="produits.html" class="nav-link">Produits</a></li>
+                <li><a href="details.html" class="nav-link">Détails</a></li>
+                <li><a href="publicite.html" class="nav-link">Publicité</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="panier.html" class="nav-link cart-link">
+                    Panier (<span id="cart-count">0</span>)
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">AgroNature</h1>
+                <p class="hero-subtitle">L'excellence alimentaire depuis 1995</p>
+                <p class="hero-description">
+                    Spécialisés dans la transformation de produits biologiques de haute qualité, 
+                    nous apportons le meilleur de la nature directement à votre table.
+                </p>
+                <button class="cta-button" onclick="window.location.href='produits.html'">
+                    Découvrir nos produits
+                </button>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="container">
+                <h2 class="section-title">Notre Équipe Fondatrice</h2>
+                
+                <div class="founder-card">
+                    <div class="founder-image">
+                        <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Directeur Général">
+                    </div>
+                    <div class="founder-info">
+                        <h3>Marc Dubois</h3>
+                        <p class="founder-title">Fondateur & Directeur Général</p>
+                        <p class="founder-description">
+                            Avec plus de 25 ans d'expérience dans l'industrie alimentaire bio, 
+                            Marc a fondé AgroNature avec la vision de révolutionner la transformation 
+                            des aliments biologiques en France.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/3778619/pexels-photo-3778619.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Équipe">
+                        <h4>Sophie Martin</h4>
+                        <p>Directrice Qualité</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Équipe">
+                        <h4>Jean-Pierre Lefèvre</h4>
+                        <p>Chef de Production</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/3184160/pexels-photo-3184160.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Équipe">
+                        <h4>Marie Durand</h4>
+                        <p>Responsable R&D</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://images.pexels.com/photos/3184423/pexels-photo-3184423.jpeg?auto=compress&cs=tinysrgb&w=300" alt="Équipe">
+                        <h4>Antoine Bernard</h4>
+                        <p>Directeur Commercial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="values-section">
+            <div class="container">
+                <h2 class="section-title">Nos Valeurs</h2>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">🌿</div>
+                        <h3>100% Bio</h3>
+                        <p>Tous nos produits sont certifiés biologiques et respectent l'environnement.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">⭐</div>
+                        <h3>Qualité Premium</h3>
+                        <p>Nous sélectionnons rigoureusement nos matières premières pour une qualité exceptionnelle.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">🚚</div>
+                        <h3>Livraison Rapide</h3>
+                        <p>Expédition sous 24h pour des produits toujours frais à votre table.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AgroNature</h3>
+                    <p>Votre partenaire pour une alimentation saine et naturelle.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact@agronature.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroNature. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

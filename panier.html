@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier - AgroNature</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌱 AgroNature</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="produits.html" class="nav-link">Produits</a></li>
+                <li><a href="details.html" class="nav-link">Détails</a></li>
+                <li><a href="publicite.html" class="nav-link">Publicité</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="panier.html" class="nav-link cart-link active">
+                    Panier (<span id="cart-count">0</span>)
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="cart-main">
+        <section class="cart-hero">
+            <div class="container">
+                <h1>Mon Panier</h1>
+                <p>Finalisez votre commande de produits bio</p>
+            </div>
+        </section>
+
+        <section class="cart-content">
+            <div class="container">
+                <div class="cart-layout">
+                    <div class="cart-items-section">
+                        <div id="cart-items">
+                            <!-- Les articles du panier seront générés par JavaScript -->
+                        </div>
+                        <div id="empty-cart" class="empty-cart" style="display: none;">
+                            <div class="empty-cart-content">
+                                <div class="empty-cart-icon">🛒</div>
+                                <h3>Votre panier est vide</h3>
+                                <p>Découvrez notre gamme de produits bio et ajoutez vos favoris !</p>
+                                <a href="produits.html" class="continue-shopping-btn">
+                                    Continuer mes achats
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cart-summary-section">
+                        <div class="cart-summary">
+                            <h3>Récapitulatif</h3>
+                            <div class="summary-line">
+                                <span>Sous-total</span>
+                                <span id="subtotal">0,00 €</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Livraison</span>
+                                <span id="shipping">7,90 €</span>
+                            </div>
+                            <div class="summary-line total">
+                                <span>Total</span>
+                                <span id="total">0,00 €</span>
+                            </div>
+                            <div class="shipping-info">
+                                <small>🚚 Livraison gratuite dès 50€ d'achat</small>
+                            </div>
+                            <button id="checkout-btn" class="checkout-btn" disabled>
+                                Passer la commande
+                            </button>
+                        </div>
+
+                        <div class="promo-code">
+                            <h4>Code Promotionnel</h4>
+                            <div class="promo-input-group">
+                                <input type="text" id="promo-input" placeholder="Entrez votre code">
+                                <button id="apply-promo">Appliquer</button>
+                            </div>
+                            <div id="promo-message" class="promo-message"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de commande -->
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Finaliser la Commande</h2>
+            <form id="checkout-form">
+                <div class="form-section">
+                    <h3>Informations de Livraison</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Prénom *</label>
+                            <input type="text" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nom *</label>
+                            <input type="text" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Adresse *</label>
+                        <input type="text" name="address" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Code postal *</label>
+                            <input type="text" name="zipCode" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ville *</label>
+                            <input type="text" name="city" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Téléphone *</label>
+                        <input type="tel" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Mode de Paiement</h3>
+                    <div class="payment-methods">
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="card" checked>
+                            <span>💳 Carte Bancaire</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="paypal">
+                            <span>💰 PayPal</span>
+                        </label>
+                        <label class="payment-option">
+                            <input type="radio" name="payment" value="transfer">
+                            <span>🏦 Virement Bancaire</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h3>Résumé de la Commande</h3>
+                    <div id="modal-cart-summary"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="cancel-btn" onclick="closeCheckoutModal()">
+                        Annuler
+                    </button>
+                    <button type="submit" class="confirm-btn">
+                        Confirmer la Commande
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AgroNature</h3>
+                    <p>Votre partenaire pour une alimentation saine et naturelle.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact@agronature.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroNature. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

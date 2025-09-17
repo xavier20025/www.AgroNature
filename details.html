@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails de Production - AgroNature</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌱 AgroNature</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="produits.html" class="nav-link">Produits</a></li>
+                <li><a href="details.html" class="nav-link active">Détails</a></li>
+                <li><a href="publicite.html" class="nav-link">Publicité</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="panier.html" class="nav-link cart-link">
+                    Panier (<span id="cart-count">0</span>)
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="details-main">
+        <section class="details-hero">
+            <div class="container">
+                <h1>Notre Processus de Transformation</h1>
+                <p>Découvrez comment nous transformons les matières premières bio en produits d'exception</p>
+            </div>
+        </section>
+
+        <section class="process-section">
+            <div class="container">
+                <div class="process-timeline">
+                    <div class="process-step">
+                        <div class="step-image">
+                            <img src="https://images.pexels.com/photos/1459339/pexels-photo-1459339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sélection des matières premières">
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">01</div>
+                            <h3>Sélection des Matières Premières</h3>
+                            <p>Nous sélectionnons rigoureusement nos matières premières auprès de producteurs certifiés bio. Chaque lot est contrôlé selon nos standards qualité avant d'entrer dans notre usine.</p>
+                            <ul>
+                                <li>Contrôle qualité à réception</li>
+                                <li>Vérification des certifications bio</li>
+                                <li>Analyse microbiologique</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-content">
+                            <div class="step-number">02</div>
+                            <h3>Nettoyage et Préparation</h3>
+                            <p>Les matières premières passent par un processus de nettoyage minutieux utilisant des techniques respectueuses de l'environnement et préservant leurs qualités nutritionnelles.</p>
+                            <ul>
+                                <li>Tri automatique par densité</li>
+                                <li>Nettoyage à sec et humide</li>
+                                <li>Calibrage et standardisation</li>
+                            </ul>
+                        </div>
+                        <div class="step-image">
+                            <img src="https://images.pexels.com/photos/3018977/pexels-photo-3018977.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Nettoyage et préparation">
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-image">
+                            <img src="https://images.pexels.com/photos/5778899/pexels-photo-5778899.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Transformation">
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">03</div>
+                            <h3>Transformation</h3>
+                            <p>Nos équipements de pointe permettent une transformation douce qui préserve toutes les qualités nutritionnelles et gustatives de nos produits.</p>
+                            <ul>
+                                <li>Technologie de transformation à froid</li>
+                                <li>Processus sans additifs chimiques</li>
+                                <li>Contrôle température et humidité</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-content">
+                            <div class="step-number">04</div>
+                            <h3>Conditionnement</h3>
+                            <p>Chaque produit est conditionné dans des emballages respectueux de l'environnement, garantissant une conservation optimale et une fraîcheur prolongée.</p>
+                            <ul>
+                                <li>Emballages biodégradables</li>
+                                <li>Étiquetage traçable</li>
+                                <li>Contrôle poids et étanchéité</li>
+                            </ul>
+                        </div>
+                        <div class="step-image">
+                            <img src="https://images.pexels.com/photos/4170629/pexels-photo-4170629.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Conditionnement">
+                        </div>
+                    </div>
+
+                    <div class="process-step">
+                        <div class="step-image">
+                            <img src="https://images.pexels.com/photos/4393668/pexels-photo-4393668.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Contrôle qualité">
+                        </div>
+                        <div class="step-content">
+                            <div class="step-number">05</div>
+                            <h3>Contrôle Qualité Final</h3>
+                            <p>Avant expédition, chaque lot subit un contrôle qualité final dans notre laboratoire certifié pour garantir la conformité aux standards les plus élevés.</p>
+                            <ul>
+                                <li>Tests microbiologiques</li>
+                                <li>Analyses nutritionnelles</li>
+                                <li>Vérification traçabilité</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="certifications-section">
+            <div class="container">
+                <h2 class="section-title">Nos Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="certification-card">
+                        <div class="cert-icon">🏆</div>
+                        <h3>Bio EU</h3>
+                        <p>Certification biologique européenne garantissant la qualité et l'origine de nos produits.</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-icon">✅</div>
+                        <h3>ISO 22000</h3>
+                        <p>Standard international pour la sécurité alimentaire et la gestion de la qualité.</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-icon">🌱</div>
+                        <h3>AB France</h3>
+                        <p>Label Agriculture Biologique français, gage de qualité et de traçabilité.</p>
+                    </div>
+                    <div class="certification-card">
+                        <div class="cert-icon">🌍</div>
+                        <h3>Fair Trade</h3>
+                        <p>Commerce équitable pour soutenir les producteurs locaux et l'économie durable.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AgroNature</h3>
+                    <p>Votre partenaire pour une alimentation saine et naturelle.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact@agronature.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroNature. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

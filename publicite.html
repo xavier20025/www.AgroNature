@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicités & Promotions - AgroNature</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌱 AgroNature</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="produits.html" class="nav-link">Produits</a></li>
+                <li><a href="details.html" class="nav-link">Détails</a></li>
+                <li><a href="publicite.html" class="nav-link active">Publicité</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="panier.html" class="nav-link cart-link">
+                    Panier (<span id="cart-count">0</span>)
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="ads-main">
+        <section class="ads-hero">
+            <div class="container">
+                <h1>Promotions & Offres Spéciales</h1>
+                <p>Découvrez nos offres exceptionnelles et profitez de réductions exclusives</p>
+            </div>
+        </section>
+
+        <section class="featured-offers">
+            <div class="container">
+                <h2 class="section-title">Offres du Moment</h2>
+                <div class="offers-slider">
+                    <div class="offer-card featured">
+                        <div class="offer-badge">-30%</div>
+                        <img src="https://images.pexels.com/photos/5640746/pexels-photo-5640746.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Promotion céréales">
+                        <div class="offer-content">
+                            <h3>Pack Céréales Bio</h3>
+                            <p class="offer-description">Lot de 5 variétés de céréales bio : quinoa, avoine, millet, sarrasin et épeautre</p>
+                            <div class="offer-price">
+                                <span class="old-price">89.99€</span>
+                                <span class="new-price">62.99€</span>
+                            </div>
+                            <button class="offer-btn" onclick="addSpecialOfferToCart('pack-cereales', 62.99)">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="offer-card">
+                        <div class="offer-badge">-25%</div>
+                        <img src="https://images.pexels.com/photos/6827578/pexels-photo-6827578.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Promotion huiles">
+                        <div class="offer-content">
+                            <h3>Trio Huiles Pressées à Froid</h3>
+                            <p class="offer-description">Huile d'olive, de tournesol et de colza bio pressées à froid</p>
+                            <div class="offer-price">
+                                <span class="old-price">45.99€</span>
+                                <span class="new-price">34.49€</span>
+                            </div>
+                            <button class="offer-btn" onclick="addSpecialOfferToCart('trio-huiles', 34.49)">
+                                Ajouter au panier
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promotional-gallery">
+            <div class="container">
+                <h2 class="section-title">Galerie Promotionnelle</h2>
+                <div class="promo-controls">
+                    <input type="file" id="upload-promo" accept="image/*" multiple style="display: none;">
+                    <button class="upload-btn" onclick="document.getElementById('upload-promo').click()">
+                        📸 Ajouter une Affiche
+                    </button>
+                </div>
+                
+                <div class="promo-gallery" id="promo-gallery">
+                    <div class="promo-item">
+                        <img src="https://images.pexels.com/photos/5686463/pexels-photo-5686463.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Promo 1">
+                        <div class="promo-overlay">
+                            <h4>Nouvelle Gamme Bio</h4>
+                            <p>Découvrez nos nouveaux produits</p>
+                        </div>
+                    </div>
+                    <div class="promo-item">
+                        <img src="https://images.pexels.com/photos/4198930/pexels-photo-4198930.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Promo 2">
+                        <div class="promo-overlay">
+                            <h4>Livraison Gratuite</h4>
+                            <p>Pour toute commande > 50€</p>
+                        </div>
+                    </div>
+                    <div class="promo-item">
+                        <img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Promo 3">
+                        <div class="promo-overlay">
+                            <h4>Programme Fidélité</h4>
+                            <p>Cumulez des points à chaque achat</p>
+                        </div>
+                    </div>
+                    <div class="promo-item">
+                        <img src="https://images.pexels.com/photos/5825736/pexels-photo-5825736.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Promo 4">
+                        <div class="promo-overlay">
+                            <h4>Vente Flash</h4>
+                            <p>48h de promotions exceptionnelles</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-card">
+                    <h2>Restez Informé de Nos Promotions</h2>
+                    <p>Inscrivez-vous à notre newsletter pour recevoir en avant-première toutes nos offres spéciales</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Votre adresse email" required>
+                        <button type="submit">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AgroNature</h3>
+                    <p>Votre partenaire pour une alimentation saine et naturelle.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact@agronature.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroNature. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

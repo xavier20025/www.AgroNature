@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produits - AgroNature</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌱 AgroNature</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="produits.html" class="nav-link active">Produits</a></li>
+                <li><a href="details.html" class="nav-link">Détails</a></li>
+                <li><a href="publicite.html" class="nav-link">Publicité</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="panier.html" class="nav-link cart-link">
+                    Panier (<span id="cart-count">0</span>)
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="products-main">
+        <section class="products-hero">
+            <div class="container">
+                <h1>Nos Produits Bio</h1>
+                <p>Découvrez notre gamme complète de produits alimentaires biologiques</p>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="filters">
+                    <button class="filter-btn active" data-category="all">Tous</button>
+                    <button class="filter-btn" data-category="cereales">Céréales</button>
+                    <button class="filter-btn" data-category="legumineuses">Légumineuses</button>
+                    <button class="filter-btn" data-category="huiles">Huiles</button>
+                    <button class="filter-btn" data-category="conserves">Conserves</button>
+                </div>
+
+                <div class="products-grid" id="products-grid">
+                    <!-- Les produits seront générés par JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AgroNature</h3>
+                    <p>Votre partenaire pour une alimentation saine et naturelle.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact@agronature.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroNature. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

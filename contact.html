@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - AgroNature</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>🌱 AgroNature</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="produits.html" class="nav-link">Produits</a></li>
+                <li><a href="details.html" class="nav-link">Détails</a></li>
+                <li><a href="publicite.html" class="nav-link">Publicité</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                <li><a href="panier.html" class="nav-link cart-link">
+                    Panier (<span id="cart-count">0</span>)
+                </a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="contact-main">
+        <section class="contact-hero">
+            <div class="container">
+                <h1>Contactez-Nous</h1>
+                <p>Nous sommes à votre écoute pour répondre à toutes vos questions</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-form-section">
+                        <h2>Envoyez-nous un Message</h2>
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nom complet *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Téléphone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Sujet *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Choisissez un sujet</option>
+                                    <option value="commande">Question sur une commande</option>
+                                    <option value="produit">Information produit</option>
+                                    <option value="livraison">Problème de livraison</option>
+                                    <option value="partenariat">Proposition de partenariat</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Décrivez votre demande en détail..."></textarea>
+                            </div>
+                            <div class="form-group checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="newsletter" name="newsletter">
+                                    <span class="checkmark"></span>
+                                    Je souhaite recevoir la newsletter AgroNature
+                                </label>
+                            </div>
+                            <button type="submit" class="submit-btn">
+                                <span>Envoyer le Message</span>
+                                <div class="loading-spinner" style="display: none;"></div>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-section">
+                        <div class="contact-card">
+                            <h3>Informations de Contact</h3>
+                            <div class="contact-item">
+                                <div class="contact-icon">📍</div>
+                                <div class="contact-details">
+                                    <h4>Adresse</h4>
+                                    <p>Zone Industrielle Bio<br>
+                                    123 Rue de la Nature<br>
+                                    69000 Lyon, France</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📞</div>
+                                <div class="contact-details">
+                                    <h4>Téléphone</h4>
+                                    <p>+33 1 23 45 67 89</p>
+                                    <small>Lun-Ven: 8h-19h<br>Sam: 9h-17h</small>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">📧</div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <p>contact@agronature.fr</p>
+                                    <small>Réponse sous 2h ouvrées</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hours-card">
+                            <h3>Horaires d'Ouverture</h3>
+                            <div class="hours-list">
+                                <div class="hours-item">
+                                    <span>Lundi - Vendredi</span>
+                                    <span>8h00 - 19h00</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Samedi</span>
+                                    <span>9h00 - 17h00</span>
+                                </div>
+                                <div class="hours-item">
+                                    <span>Dimanche</span>
+                                    <span>Fermé</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-card">
+                            <h3>Suivez-Nous</h3>
+                            <div class="social-links">
+                                <a href="#" class="social-link">
+                                    <span>📘</span> Facebook
+                                </a>
+                                <a href="#" class="social-link">
+                                    <span>📷</span> Instagram
+                                </a>
+                                <a href="#" class="social-link">
+                                    <span>🐦</span> Twitter
+                                </a>
+                                <a href="#" class="social-link">
+                                    <span>💼</span> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <h2 class="section-title">Notre Localisation</h2>
+                <div class="map-placeholder">
+                    <div class="map-content">
+                        <div class="map-marker">📍</div>
+                        <h3>AgroNature - Usine de Transformation</h3>
+                        <p>Zone Industrielle Bio, Lyon</p>
+                        <p>Accès facile par l'A6 - Parking visiteurs disponible</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AgroNature</h3>
+                    <p>Votre partenaire pour une alimentation saine et naturelle.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>📧 contact@agronature.fr</p>
+                    <p>📞 01 23 45 67 89</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AgroNature. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
